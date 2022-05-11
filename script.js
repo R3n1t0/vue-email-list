@@ -16,11 +16,14 @@ const app = new Vue({
     generaMaiList(){
       for (let i = 0; i < 10 ; i++) {
         axios.get("https://flynn.boolean.careers/exercises/api/random/mail") 
-          .then((res)=>{
-          this.maiList = res.data.response
-          console.log(this.maiList);
+        .then((res)=>{
+
+          this.maiList.push(res.data.response) 
+          
         })
+
       }
+
     }
 
   },
