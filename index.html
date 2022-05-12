@@ -17,8 +17,10 @@
 <body>
   
   <div id="app">
+
+    <div v-if="loading">loading ...</div>
     
-    <ol>
+    <ol v-else>
       <!-- Stampiamo tutta la mailing list -->
       <li v-for="mail in maiList">{{mail}}</li>
     </ol>
