@@ -29,7 +29,12 @@ const app = new Vue({
 
       }
 
-      this.loading = false
+      setTimeout(()=>{
+
+        this.loading = false
+
+      },3000)
+
  
     }
 
@@ -37,11 +42,7 @@ const app = new Vue({
 
   mounted(){
 
-    setTimeout(()=>{
-
-      this.generaMaiList()
-
-    },3000)
+    this.generaMaiList()
 
   },
 
