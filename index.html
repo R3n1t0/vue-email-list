@@ -18,12 +18,18 @@
   
   <div id="app">
 
-    <div v-if="loading">loading ...</div>
+    <div v-if="!isError">
+      <div v-if="isLoading">loading ...</div>
     
-    <ol v-else>
-      <!-- Stampiamo tutta la mailing list -->
-      <li v-for="mail in maiList">{{mail}}</li>
-    </ol>
+      <ol v-else>
+        <!-- Stampiamo tutta la mailing list -->
+        <li v-for="mail in maiList">{{mail}}</li>
+      </ol>
+    </div>
+
+    <div else>{{errorMessage}}</div>
+
+    
 
   </div>
 
